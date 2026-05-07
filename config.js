@@ -1,154 +1,282 @@
-// ============================================================
-//  J.T. CHURCH PORTFOLIO — CONFIG FILE
-//  Edit this file to update your portfolio content.
-//  After saving, push to GitHub and the site updates live.
-// ============================================================
+// Portfolio configuration
+const CONFIG = {
+  // Site metadata
+  siteName: "Your Portfolio Name",
+  tagline: "Designer & Illustrator",
+  
+  // Card categories - each card will randomly get one of these themes
+  categories: {
+    forest: {
+      name: "Forest",
+      color: "#2d5016", // Deep forest green
+      description: "Illustrations & Narrative Work"
+    },
+    village: {
+      name: "Village", 
+      color: "#8b4513", // Warm terracotta/saddle brown
+      description: "Logos & Brand Identity"
+    },
+    monster: {
+      name: "Monster",
+      color: "#4a0000", // Deep red/maroon - used for game over cards
+      description: "Game Over"
+    },
+    treasure: {
+      name: "Treasure",
+      color: "#997700", // Golden/treasure color
+      description: "You Win!"
+    }
+  },
 
+  // Portfolio pieces
+  portfolio: [
+    // FOREST CATEGORY - Illustrations (8 cards)
+    {
+      id: "illus1",
+      title: "Fantasy Map",
+      category: "forest",
+      image: "Illus1.png",
+      description: "Hand-drawn fantasy map with villages and landmarks",
+      client: null,
+      year: null,
+      tags: ["illustration", "map", "fantasy"]
+    },
+    {
+      id: "illus2",
+      title: "Journey to the Castle",
+      category: "forest",
+      image: "Illus2.png",
+      description: "Tortoises on an epic journey through mountains",
+      client: null,
+      year: null,
+      tags: ["illustration", "fantasy", "journey"]
+    },
+    {
+      id: "illus3",
+      title: "Foxes at the Manor",
+      category: "forest",
+      image: "Illus3.png",
+      description: "Vintage-style illustration of foxes by a manor house",
+      client: null,
+      year: null,
+      tags: ["illustration", "vintage", "animals"]
+    },
+    {
+      id: "illus4",
+      title: "Underground Den",
+      category: "forest",
+      image: "Illus4.png",
+      description: "Cross-section view of family discovering underground secrets",
+      client: null,
+      year: null,
+      tags: ["illustration", "mystery", "home"]
+    },
+    {
+      id: "illus5",
+      title: "Dragon Battle",
+      category: "forest",
+      image: "Illus5.png",
+      description: "Epic warrior confronting a dragon",
+      client: null,
+      year: null,
+      tags: ["illustration", "fantasy", "action"]
+    },
+    {
+      id: "illus6",
+      title: "Winter Hibernation",
+      category: "forest",
+      image: "Illus6.png",
+      description: "Foxes nestled in their underground burrow during winter",
+      client: null,
+      year: null,
+      tags: ["illustration", "nature", "cross-section"]
+    },
+    {
+      id: "illus7",
+      title: "Kitchen Chaos",
+      category: "forest",
+      image: "Illus7.png",
+      description: "Modern life meets social media perfection",
+      client: null,
+      year: null,
+      tags: ["illustration", "contemporary", "humor"]
+    },
+    {
+      id: "illus8",
+      title: "Electric Glaze Donuts",
+      category: "forest",
+      image: "Illus8.png",
+      description: "Vibrant neon donut shop branding illustration",
+      client: "Electric Glaze",
+      year: null,
+      tags: ["illustration", "neon", "retro"]
+    },
 
-// ── SITE INFO ──────────────────────────────────────────────
-var SITE_CONFIG = {
-  name:    'J.T. Church',
-  handle:  'jtchurch',                        // your GitHub username
-  tagline: 'Illustration & Design',
-  bio:     'I make things look like they mean it. ' +
-           '<strong>Illustration, identity, and web design</strong> ' +
-           '— with a bias toward work that has a point of view. ' +
-           'Michigan-based. Available.',
-  about: [
-    'I\'m <strong>Joshua Timothy Church</strong>, a Michigan-based illustrator ' +
-    'and designer with a range that\'s genuinely hard to pin down. Character work, ' +
-    'poster design, logo systems, web layouts — I follow the idea wherever it goes.',
-    'My illustration work tends toward the expressive and personal. My design work ' +
-    'tends toward the precise and strategic. Occasionally they collide in interesting ways.'
-  ],
-  email:    'hello@jtchurch.com',
-  github:   'https://github.com/jtchurch',
-  behance:  'https://behance.net/jtchurch',
-  linkedin: 'https://linkedin.com/in/jtchurch',
+    // VILLAGE CATEGORY - Logos (9 cards)
+    {
+      id: "logo2",
+      title: "Bombshell Salon & Spa",
+      category: "village",
+      image: "Logo2.png",
+      description: "Beauty salon branding with elegant illustration",
+      client: "Bombshell Salon & Spa",
+      year: null,
+      tags: ["logo", "beauty", "elegant"]
+    },
+    {
+      id: "logo3",
+      title: "Crane Technologies",
+      category: "village",
+      image: "Logo3.png",
+      description: "Tech company logo with clever crane hook design",
+      client: "Crane Technologies",
+      year: null,
+      tags: ["logo", "technology", "clever"]
+    },
+    {
+      id: "logo5",
+      title: "Electric Glaze",
+      category: "village",
+      image: "Logo5.png",
+      description: "Retro neon donut shop branding",
+      client: "Electric Glaze",
+      year: null,
+      tags: ["logo", "neon", "80s", "food"]
+    },
+    {
+      id: "logo7",
+      title: "Hicks & Cline Painting",
+      category: "village",
+      image: "Logo7.png",
+      description: "Professional painting company monogram with ladder detail",
+      client: "Hicks & Cline Painting LLC",
+      year: null,
+      tags: ["logo", "monogram", "construction"]
+    },
+    {
+      id: "logo8",
+      title: "The Riff",
+      category: "village",
+      image: "Logo8.gif",
+      description: "Bold, angular logo with dynamic energy",
+      client: "The Riff",
+      year: null,
+      tags: ["logo", "animated", "music", "bold"]
+    },
+    {
+      id: "logo10",
+      title: "The Stone Soup Project",
+      category: "village",
+      image: "Logo10.png",
+      description: "Hand-drawn community organization branding",
+      client: "The Stone Soup Project",
+      year: null,
+      tags: ["logo", "hand-drawn", "community", "nonprofit"]
+    },
+    {
+      id: "logo13",
+      title: "Arrow Line Company",
+      category: "village",
+      image: "Logo13.png",
+      description: "Clean typography with strong directional design",
+      client: "Arrow Line Company",
+      year: null,
+      tags: ["logo", "typography", "modern"]
+    },
+    {
+      id: "logo14",
+      title: "Howell Home",
+      category: "village",
+      image: "Logo14.png",
+      description: "Real estate and construction company branding",
+      client: "Howell Home",
+      year: null,
+      tags: ["logo", "real-estate", "construction"]
+    },
+    {
+      id: "logo15",
+      title: "Brothers Beard Balm",
+      category: "village",
+      image: "Logo15.png",
+      description: "Vintage globe design for handcrafted grooming products",
+      client: "Brothers Beard Balm",
+      year: null,
+      tags: ["logo", "vintage", "grooming", "handcrafted"]
+    },
+
+    // MONSTER CATEGORY - Game Over cards (5 cards)
+    {
+      id: "monster1",
+      title: "Game Over",
+      category: "monster",
+      image: "Monster1.jpg",
+      description: "The Pancake Monster has found you!",
+      client: null,
+      year: null,
+      tags: ["game-over", "monster"],
+      isGameOver: true
+    },
+    {
+      id: "monster2",
+      title: "Game Over",
+      category: "monster",
+      image: "Monster2.jpg",
+      description: "The Mimic Chest was a trap!",
+      client: null,
+      year: null,
+      tags: ["game-over", "monster"],
+      isGameOver: true
+    },
+    {
+      id: "monster3",
+      title: "Game Over",
+      category: "monster",
+      image: "Monster3.jpg",
+      description: "The Copy Machine Monster strikes!",
+      client: null,
+      year: null,
+      tags: ["game-over", "monster"],
+      isGameOver: true
+    },
+    {
+      id: "monster4",
+      title: "Game Over",
+      category: "monster",
+      image: "Monster4.jpg",
+      description: "Dragged into the depths!",
+      client: null,
+      year: null,
+      tags: ["game-over", "monster"],
+      isGameOver: true
+    },
+    {
+      id: "monster5",
+      title: "Game Over",
+      category: "monster",
+      image: "Monster5.jpg",
+      description: "The Server Room Horror has you!",
+      client: null,
+      year: null,
+      tags: ["game-over", "monster"],
+      isGameOver: true
+    },
+
+    // TREASURE CATEGORY - Victory card (1 card)
+    {
+      id: "treasure1",
+      title: "You Win!",
+      category: "treasure",
+      image: "Tereasure1.jpg",
+      description: "You found the treasure!",
+      client: null,
+      year: null,
+      tags: ["victory", "treasure"],
+      isVictory: true
+    }
+  ]
 };
 
-
-// ── CARDS ──────────────────────────────────────────────────
-// category must be one of:
-//   'Illustration' | 'Logo Design' | 'Web Design' | 'Experimental'
-//
-// image: path relative to index.html, e.g. 'images/wanderer.jpg'
-//        Leave as '' to show a colored placeholder until you add the image.
-//
-// Add, remove, or reorder cards freely.
-// The grid layout adjusts automatically (max 3 per row, connected blob).
-
-var CARDS = [
-  {
-    title:       'The Wanderer',
-    category:    'Illustration',
-    description: 'A series of character studies exploring movement, emotion, and ' +
-                 'narrative without words. Mixed media digital illustration.',
-    image:       '',
-  },
-  {
-    title:       'Northern Mark',
-    category:    'Logo Design',
-    description: 'Brand identity for a Northern Michigan outfitter. Clean geometric ' +
-                 'mark, earthy palette, built for signage and apparel.',
-    image:       '',
-  },
-  {
-    title:       'Digital Frontier',
-    category:    'Web Design',
-    description: 'Full site design for a regional creative agency. ' +
-                 'Type-forward, fast, built for conversion.',
-    image:       '',
-  },
-  {
-    title:       'Dream States',
-    category:    'Illustration',
-    description: 'Personal series. Surreal landscapes, recurring symbols, ink and ' +
-                 'color. The kind of work that doesn\'t have a brief.',
-    image:       '',
-  },
-  {
-    title:       'Strange Terrain',
-    category:    'Experimental',
-    description: 'Where the brief ended and the interesting stuff began. ' +
-                 'Experimental typography, texture, and form.',
-    image:       '',
-  },
-  {
-    title:       'Ember Identity',
-    category:    'Logo Design',
-    description: 'Full identity system for a craft food brand. Logo, wordmark, ' +
-                 'packaging guidelines, and color system.',
-    image:       '',
-  },
-  {
-    title:       'Field Notes',
-    category:    'Illustration',
-    description: 'Editorial illustration. Spot work for editorial and publishing ' +
-                 'clients, in ink and digital.',
-    image:       '',
-  },
-  {
-    title:       'The Archive',
-    category:    'Web Design',
-    description: 'UI design for a small museum\'s digital collection. Information ' +
-                 'architecture, reading experience, accessibility.',
-    image:       '',
-  },
-  {
-    title:       'Hollow Ground',
-    category:    'Illustration',
-    description: 'A series of landscape studies — ink, texture, and negative space. ' +
-                 'Somewhere between map and mythology.',
-    image:       '',
-  },
-  {
-    title:       'Meridian',
-    category:    'Logo Design',
-    description: 'Mark and wordmark for a design consultancy. Precision geometry, ' +
-                 'flexible system, built for environmental and digital use.',
-    image:       '',
-  },
-  {
-    title:       'Vessel',
-    category:    'Illustration',
-    description: 'Figure work exploring containment, weight, and stillness. ' +
-                 'A quieter body of work — slower, more deliberate.',
-    image:       '',
-  },
-  {
-    title:       'Signal & Noise',
-    category:    'Web Design',
-    description: 'Dashboard and data viz design for a media analytics platform. ' +
-                 'Dense information, clear hierarchy, no chart junk.',
-    image:       '',
-  },
-  {
-    title:       'The Cartographer',
-    category:    'Illustration',
-    description: 'Fictional maps and imagined territories. Detailed linework, ' +
-                 'invented geography, the pleasure of a place that doesn\'t exist.',
-    image:       '',
-  },
-  {
-    title:       'Threshold',
-    category:    'Experimental',
-    description: 'Collage, noise, and process. Work made without a destination — ' +
-                 'kept because it went somewhere unexpected anyway.',
-    image:       '',
-  },
-  {
-    title:       'Ironwood Co.',
-    category:    'Logo Design',
-    description: 'Identity for a small-batch furniture maker. Stamp-style mark, ' +
-                 'rugged palette, designed to age well on wood and paper.',
-    image:       '',
-  },
-  {
-    title:       'Cascade',
-    category:    'Web Design',
-    description: 'E-commerce redesign for a Pacific Northwest apparel brand. ' +
-                 'Clean product display, editorial feel, high conversion focus.',
-    image:       '',
-  },
-];
+// Export for use in other files
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = CONFIG;
+}
