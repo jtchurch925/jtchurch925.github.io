@@ -35,7 +35,7 @@ const CONFIG = {
       id: "illus1",
       title: "Fantasy Map",
       category: "forest",
-      image: "images/images/Illus1.png",
+      image: "images/Illus1.png",
       description: "Hand-drawn fantasy map with villages and landmarks",
       client: null,
       year: null,
