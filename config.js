@@ -33,30 +33,30 @@ const CONFIG = {
     // FOREST CATEGORY - Illustrations (8 cards)
     {
       id: "illus1",
-      title: "Fantasy Map",
+      title: "Winter Hibernation",
       category: "forest",
       image: "Illus1.png",
-      description: "Hand-drawn fantasy map with villages and landmarks",
+      description: "Foxes nestled in their underground burrow during winter",
       client: null,
       year: null,
       tags: ["illustration", "map", "fantasy"]
     },
     {
       id: "illus2",
-      title: "Journey to the Castle",
+      title: "Foxes at the Manor",
       category: "forest",
       image: "Illus2.png",
-      description: "Tortoises on an epic journey through mountains",
+      description: "Vintage-style illustration of foxes by a manor house",
       client: null,
       year: null,
       tags: ["illustration", "fantasy", "journey"]
     },
     {
       id: "illus3",
-      title: "Foxes at the Manor",
+      title: "Fantasy Map",
       category: "forest",
       image: "Illus3.png",
-      description: "Vintage-style illustration of foxes by a manor house",
+      description: "Hand-drawn fantasy map with villages and landmarks",
       client: null,
       year: null,
       tags: ["illustration", "vintage", "animals"]
@@ -83,10 +83,10 @@ const CONFIG = {
     },
     {
       id: "illus6",
-      title: "Winter Hibernation",
+      title: "Journey to the Castle",
       category: "forest",
       image: "Illus6.png",
-      description: "Foxes nestled in their underground burrow during winter",
+      description: "Tortoises on an epic journey through mountains",
       client: null,
       year: null,
       tags: ["illustration", "nature", "cross-section"]
