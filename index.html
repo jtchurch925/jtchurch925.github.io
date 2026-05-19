@@ -111,7 +111,7 @@
 
     /* CARD GRID */
     .card-section { padding: 3rem 0 4rem; }
-    .card-grid { display: grid; grid-template-columns: repeat(5, 180px); grid-template-rows: repeat(6, 252px); grid-auto-rows: 252px; gap: 2rem; justify-content: center; padding: 0 3rem; }
+    .card-grid { display: grid; grid-template-columns: repeat(4, 180px); grid-template-rows: repeat(6, 252px); grid-auto-rows: 252px; gap: 2rem; justify-content: center; padding: 0 3rem; }
 
     /* CARD SCENE */
     .card-scene { width: 180px; height: 252px; perspective: 1000px; cursor: pointer; }
@@ -242,6 +242,9 @@
       #about { grid-template-columns:1fr; gap:3rem; padding:4rem 1.5rem; }
       #contact { padding:4rem 1.5rem; }
       footer { padding:1.25rem 1.5rem; flex-direction:column; gap:.4rem; text-align:center; }
+    }
+    @media (max-width:520px) {
+      .card-grid { grid-template-columns:repeat(2,148px); }
     }
   </style>
   <script src="config.js"></script>
@@ -501,10 +504,10 @@
 
     // ── LAYOUTS ───────────────────────────────────────────────
     var LAYOUTS = [
-      [[2,1],[3,1],[4,1],[4,2],[5,2],[3,3],[4,3],[5,3],[2,4],[3,4],[4,4],[1,5],[2,5],[1,6],[2,6],[3,6]],
-      [[3,1],[4,1],[5,1],[3,2],[4,2],[5,2],[2,3],[3,3],[4,3],[1,4],[2,4],[3,4],[1,5],[2,5],[3,5],[2,6]],
-      [[1,1],[2,1],[3,1],[2,2],[3,2],[4,2],[3,3],[4,3],[5,3],[3,4],[4,4],[5,4],[2,5],[3,5],[4,5],[1,6]],
-      [[2,1],[3,1],[4,1],[1,2],[2,2],[3,2],[1,3],[2,3],[3,3],[2,4],[3,4],[4,4],[3,5],[4,5],[5,5],[4,6]]
+      [[1,1],[2,1],[4,1],[2,2],[3,2],[4,2],[1,3],[3,3],[4,3],[1,4],[2,4],[4,4],[2,5],[4,5],[1,6],[3,6]],
+      [[2,1],[3,1],[4,1],[1,2],[3,2],[4,2],[1,3],[2,3],[4,3],[2,4],[3,4],[4,4],[1,5],[3,5],[2,6],[4,6]],
+      [[1,1],[3,1],[4,1],[1,2],[2,2],[4,2],[2,3],[3,3],[4,3],[1,4],[2,4],[3,4],[3,5],[4,5],[1,6],[2,6]],
+      [[2,1],[3,1],[4,1],[1,2],[2,2],[3,2],[1,3],[3,3],[4,3],[2,4],[3,4],[4,4],[1,5],[2,5],[3,6],[4,6]]
     ];
     var jitters = [[-4,3],[5,-2],[-3,4],[2,-5],[4,2],[-5,3],[3,-4],[-2,5],[4,-3],[-3,2],[5,-4],[-4,5],[2,3],[-5,-2],[3,4],[-2,-3]];
     var rots    = [-3.2,2.8,-4.1,3.5,-2.7,4.2,-3.8,2.4,-4.5,3.1,-2.9,4.6,-3.3,2.6,-4.8,3.7];
