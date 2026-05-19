@@ -174,7 +174,8 @@
     .featured-overlay.active { background: rgba(0,0,0,0.72); pointer-events: all; }
     .featured-card { width: 100%; max-width: 620px; background: var(--card-face); border-radius: 20px; overflow: hidden; transform: scale(0.88) translateY(36px); opacity: 0; transition: transform 0.45s cubic-bezier(0.34,1.26,0.64,1), opacity 0.35s; box-shadow: 0 40px 100px rgba(0,0,0,0.55); position: relative; }
     .featured-overlay.active .featured-card { transform: scale(1) translateY(0); opacity: 1; }
-    .featured-image { height: 270px; background-size: cover; background-position: center; }
+    .featured-image { height: 340px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .featured-image img { max-width: 100%; max-height: 340px; object-fit: contain; display: block; }
     .featured-body { padding: 1.75rem 2.25rem 2.25rem; }
     .featured-category { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.4rem; }
     .featured-title { font-family: 'Elsie Swash Caps', serif; font-weight: 800; font-size: 1.75rem; letter-spacing: -0.02em; margin-bottom: 0.85rem; line-height: 1.1; }
@@ -290,7 +291,7 @@
   <div class="featured-overlay" id="featured-overlay">
     <div class="featured-card" id="featured-card">
       <button class="featured-close" id="featured-close">&#10005;</button>
-      <div class="featured-image" id="featured-image"></div>
+      <div class="featured-image" id="featured-image"><img id="featured-img" src="" alt="" style="display:none;"></div>
       <div class="featured-body">
         <div class="featured-category" id="featured-category"></div>
         <div class="featured-title" id="featured-title"></div>
@@ -555,14 +556,16 @@
           var col = (window.THEME_CAT_COLORS && window.THEME_CAT_COLORS[category])
                     || { bg: '#1C1A18', accent: '#E8441A' };
 
-          // FIX 2: show actual artwork in modal
+          // show actual artwork in modal
           featImage.style.background = col.bg;
+          var featImgEl = document.getElementById('featured-img');
           if (image) {
-            featImage.style.backgroundImage    = 'url(' + image + ')';
-            featImage.style.backgroundSize     = 'cover';
-            featImage.style.backgroundPosition = 'center';
+            featImgEl.src = image;
+            featImgEl.alt = scene.dataset.title;
+            featImgEl.style.display = 'block';
           } else {
-            featImage.style.backgroundImage = '';
+            featImgEl.src = '';
+            featImgEl.style.display = 'none';
           }
 
           featCat.style.color   = col.accent;
