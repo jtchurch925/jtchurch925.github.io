@@ -174,8 +174,15 @@
     .featured-overlay.active { background: rgba(0,0,0,0.72); pointer-events: all; }
     .featured-card { width: 100%; max-width: 620px; background: var(--card-face); border-radius: 20px; overflow: hidden; transform: scale(0.88) translateY(36px); opacity: 0; transition: transform 0.45s cubic-bezier(0.34,1.26,0.64,1), opacity 0.35s; box-shadow: 0 40px 100px rgba(0,0,0,0.55); position: relative; }
     .featured-overlay.active .featured-card { transform: scale(1) translateY(0); opacity: 1; }
-    .featured-image { height: 340px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-    .featured-image img { max-width: 100%; max-height: 340px; object-fit: contain; display: block; }
+    .featured-image { height: 340px; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
+    .featured-image img { max-width: 100%; max-height: 340px; object-fit: contain; display: block; cursor: zoom-in; transition: opacity 0.2s; }
+    .featured-image img:hover { opacity: 0.88; }
+    .zoom-hint { position: absolute; bottom: 0.6rem; right: 0.75rem; font-family: 'DM Sans', sans-serif; font-size: 0.62rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.65); background: rgba(0,0,0,0.38); padding: 0.2rem 0.5rem; border-radius: 4px; pointer-events: none; opacity: 0; transition: opacity 0.2s; }
+    .featured-image:hover .zoom-hint { opacity: 1; }
+    .zoom-overlay { position: fixed; inset: 0; z-index: 700; background: rgba(0,0,0,0.94); display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s; cursor: zoom-out; padding: 1.5rem; }
+    .zoom-overlay.active { opacity: 1; pointer-events: all; }
+    .zoom-overlay img { max-width: 100%; max-height: 100%; object-fit: contain; transform: scale(0.94); transition: transform 0.35s cubic-bezier(0.34,1.26,0.64,1); }
+    .zoom-overlay.active img { transform: scale(1); }
     .featured-body { padding: 1.75rem 2.25rem 2.25rem; }
     .featured-category { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.4rem; }
     .featured-title { font-family: 'Elsie Swash Caps', serif; font-weight: 800; font-size: 1.75rem; letter-spacing: -0.02em; margin-bottom: 0.85rem; line-height: 1.1; }
@@ -291,7 +298,7 @@
   <div class="featured-overlay" id="featured-overlay">
     <div class="featured-card" id="featured-card">
       <button class="featured-close" id="featured-close">&#10005;</button>
-      <div class="featured-image" id="featured-image"><img id="featured-img" src="" alt="" style="display:none;"></div>
+      <div class="featured-image" id="featured-image"><img id="featured-img" src="" alt="" style="display:none;"><span class="zoom-hint">Click to enlarge</span></div>
       <div class="featured-body">
         <div class="featured-category" id="featured-category"></div>
         <div class="featured-title" id="featured-title"></div>
@@ -299,6 +306,8 @@
       </div>
     </div>
   </div>
+
+  <div class="zoom-overlay" id="zoom-overlay"><img id="zoom-img" src="" alt=""></div>
 
   <section id="about">
     <div class="about-copy">
@@ -585,7 +594,24 @@
     }
     featClose.addEventListener('click', closeOverlay);
     overlay.addEventListener('click', function(e) { if (e.target === overlay) closeOverlay(); });
-    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeOverlay(); });
+
+    // ── ZOOM ─────────────────────────────────────────────────
+    var zoomOverlay = document.getElementById('zoom-overlay');
+    var zoomImg     = document.getElementById('zoom-img');
+
+    document.getElementById('featured-img').addEventListener('click', function() {
+      var src = this.src;
+      if (!src) return;
+      zoomImg.src = src;
+      zoomImg.alt = this.alt;
+      zoomOverlay.classList.add('active');
+    });
+    function closeZoom() { zoomOverlay.classList.remove('active'); }
+    zoomOverlay.addEventListener('click', closeZoom);
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') { closeZoom(); closeOverlay(); }
+    });
 
     // ── SCROLL REVEALS ────────────────────────────────────────
     var revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
