@@ -103,11 +103,11 @@ const CONFIG = {
     },
     {
       id: "illus8",
-      title: "Electric Glaze Donuts",
+      title: "Kiki's Pet Pics",
       category: "forest",
       image: "Illus8.png",
-      description: "Vibrant neon donut shop branding illustration",
-      client: "Electric Glaze",
+      description: "Branding for a pet photographer.",
+      client: "Kiki's Pet Pics",
       year: null,
       tags: ["illustration", "neon", "retro"]
     },
