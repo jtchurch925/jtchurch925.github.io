@@ -117,7 +117,7 @@ const CONFIG = {
       id: "logo2",
       title: "Bombshell Salon & Spa",
       category: "village",
-      image: "Logo-Bombshell-1024.jpg",
+      image: "Logo-BombShell-1024.jpg",
       description: "Beauty salon branding with elegant illustration",
       client: "Bombshell Salon & Spa",
       year: null,
