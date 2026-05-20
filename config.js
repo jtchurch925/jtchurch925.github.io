@@ -138,8 +138,8 @@ const CONFIG = {
       title: "Electric Glaze",
       category: "village",
       image: "Logo-ElectricGlaze-1024.jpg",
-      description: "Retro neon donut shop branding",
-      client: "Electric Glaze",
+      description: "Branding for a fun 80's retro donut shop.",
+      client: "Electric Glaze Donuts",
       year: null,
       tags: ["logo", "neon", "80s", "food"]
     },
