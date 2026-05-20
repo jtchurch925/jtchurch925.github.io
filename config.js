@@ -145,11 +145,11 @@ const CONFIG = {
     },
     {
       id: "logo7",
-      title: "Hicks & Cline Painting",
+      title: "Howell Home",
       category: "village",
-      image: "Logo7.png",
+      image: "Logo-HowellHome-1024.jpg",
       description: "Professional painting company monogram with ladder detail",
-      client: "Hicks & Cline Painting LLC",
+      client: "Howell Home",
       year: null,
       tags: ["logo", "monogram", "construction"]
     },
@@ -177,7 +177,7 @@ const CONFIG = {
       id: "logo13",
       title: "Arrow Line Company",
       category: "village",
-      image: "Logo-Arrow-1024.jpg",
+      image: "Logo-ArrowLine-1024.jpg",
       description: "Clean typography with strong directional design",
       client: "Arrow Line Company",
       year: null,
