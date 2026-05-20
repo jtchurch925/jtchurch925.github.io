@@ -37,7 +37,7 @@ const CONFIG = {
       category: "forest",
       image: "Illus1.png",
       description: "Foxes nestled in their underground burrow during winter",
-      client: null,
+      client: "Children's Book Illustration",
       year: null,
       tags: ["illustration", "map", "fantasy"]
     },
@@ -47,7 +47,7 @@ const CONFIG = {
       category: "forest",
       image: "Illus2.png",
       description: "Vintage-style illustration of foxes by a manor house",
-      client: null,
+      client: "Children's Book Illustration",
       year: null,
       tags: ["illustration", "fantasy", "journey"]
     },
@@ -63,20 +63,20 @@ const CONFIG = {
     },
     {
       id: "illus4",
-      title: "Underground Den",
+      title: "Cellar Surprise",
       category: "forest",
       image: "Illus4.png",
-      description: "Cross-section view of family discovering underground secrets",
-      client: null,
+      description: "A family discovers an ancient treasure hidden in the cellar",
+      client: "Children's Book Illustration",
       year: null,
       tags: ["illustration", "mystery", "home"]
     },
     {
-      id: "illus5",
+      id: "illus7",
       title: "Dragon Battle",
       category: "forest",
-      image: "Illus5.png",
-      description: "Epic warrior confronting a dragon",
+      image: "Illus7.png",
+      description: "The archangel defeats the great dragon.",
       client: null,
       year: null,
       tags: ["illustration", "fantasy", "action"]
@@ -86,16 +86,16 @@ const CONFIG = {
       title: "Journey to the Castle",
       category: "forest",
       image: "Illus6.png",
-      description: "Tortoises on an epic journey through mountains",
-      client: null,
+      description: "Tortoises on an epic journey through Scottish hills.",
+      client: "Children's Book Illustration",
       year: null,
       tags: ["illustration", "nature", "cross-section"]
     },
     {
-      id: "illus7",
+      id: "illus5",
       title: "Kitchen Chaos",
       category: "forest",
-      image: "Illus7.png",
+      image: "Illus5.png",
       description: "Modern life meets social media perfection",
       client: null,
       year: null,
@@ -148,7 +148,7 @@ const CONFIG = {
       title: "Howell Home",
       category: "village",
       image: "Logo-HowellHome-1024.jpg",
-      description: "Professional painting company monogram with ladder detail",
+      description: "Residential building and remodeling company.",
       client: "Howell Home",
       year: null,
       tags: ["logo", "monogram", "construction"]
@@ -158,7 +158,7 @@ const CONFIG = {
       title: "The Ruff",
       category: "village",
       image: "Logo-TheRuff-1024.jpg",
-      description: "Bold, angular logo with dynamic energy",
+      description: "A community featuring undiscovered indie rock artists",
       client: "The Ruff",
       year: null,
       tags: ["logo", "animated", "music", "bold"]
