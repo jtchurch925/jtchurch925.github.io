@@ -21,6 +21,7 @@ if (typeof CONFIG !== 'undefined') {
 
   // Map portfolio items to CARDS format
   window.CARDS = CONFIG.portfolio.map(function(item) {
+
     // Map category names
     var categoryMap = {
       'forest': 'Illustration',
@@ -33,7 +34,23 @@ if (typeof CONFIG !== 'undefined') {
       title: item.title,
       category: categoryMap[item.category] || 'Illustration',
       image: item.image,
-      description: item.description
+      description: item.description,
+      _raw: item.category
     };
+  });
+
+  // Limit monster and treasure to one card each
+  var monsterSeen = false;
+  var treasureSeen = false;
+  window.CARDS = window.CARDS.filter(function(card) {
+    if (card._raw === 'monster') {
+      if (monsterSeen) return false;
+      monsterSeen = true;
+    }
+    if (card._raw === 'treasure') {
+      if (treasureSeen) return false;
+      treasureSeen = true;
+    }
+    return true;
   });
 }
