@@ -53,4 +53,12 @@ if (typeof CONFIG !== 'undefined') {
     }
     return true;
   });
+
+  // Shuffle cards into random order
+  for (var i = window.CARDS.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = window.CARDS[i];
+    window.CARDS[i] = window.CARDS[j];
+    window.CARDS[j] = tmp;
+  }
 }
