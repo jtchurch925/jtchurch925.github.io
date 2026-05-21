@@ -46,7 +46,7 @@ const CONFIG = {
       title: "Foxes at the Manor",
       category: "forest",
       image: "Illus2.png",
-      description: "Vintage-style illustration of foxes by a manor house",
+      description: "Vintage children's book style illustration of foxes by a manor house",
       client: "Children's Book Illustration",
       year: null,
       tags: ["illustration", "fantasy", "journey"]
@@ -56,7 +56,7 @@ const CONFIG = {
       title: "Fantasy Map",
       category: "forest",
       image: "Illus4.png",
-      description: "Hand-drawn fantasy map with villages and landmarks",
+      description: "Hand-drawn-style map based on research of ancient Scottish-Celtic shepherd maps",
       client: null,
       year: null,
       tags: ["illustration", "vintage", "animals"]
@@ -73,7 +73,7 @@ const CONFIG = {
     },
     {
       id: "illus7",
-      title: "Dragon Battle",
+      title: "The Battle of 1914",
       category: "forest",
       image: "Illus7.png",
       description: "The archangel defeats the great dragon.",
@@ -97,16 +97,16 @@ const CONFIG = {
       category: "forest",
       image: "Illus5.png",
       description: "Modern life meets social media perfection",
-      client: null,
+      client: "InvokeAI Community Challenge Winner",
       year: null,
       tags: ["illustration", "contemporary", "humor"]
     },
     {
       id: "illus8",
-      title: "Kiki's Pet Pics",
+      title: "Kikis Pet Pics",
       category: "forest",
       image: "Illus8.png",
-      description: "Branding for a pet photographer.",
+      description: "Branding for a pet photographer",
       client: "Kiki's Pet Pics",
       year: null,
       tags: ["illustration", "neon", "retro"]
@@ -118,7 +118,7 @@ const CONFIG = {
       title: "Bombshell Salon & Spa",
       category: "village",
       image: "Logo-BombShell-1024.jpg",
-      description: "Beauty salon branding with elegant illustration",
+      description: "Beauty salon branding with attitude",
       client: "Bombshell Salon & Spa",
       year: null,
       tags: ["logo", "beauty", "elegant"]
@@ -128,7 +128,7 @@ const CONFIG = {
       title: "Crane Technologies",
       category: "village",
       image: "Logo-Crane-1024.jpg",
-      description: "Tech company logo with clever crane hook design",
+      description: "Industrial equipment company",
       client: "Crane Technologies",
       year: null,
       tags: ["logo", "technology", "clever"]
@@ -138,7 +138,7 @@ const CONFIG = {
       title: "Electric Glaze",
       category: "village",
       image: "Logo-ElectricGlaze-1024.jpg",
-      description: "Branding for a fun 80's retro donut shop.",
+      description: "Branding for a fun 80's retro donut shop",
       client: "Electric Glaze Donuts",
       year: null,
       tags: ["logo", "neon", "80s", "food"]
@@ -148,7 +148,7 @@ const CONFIG = {
       title: "Howell Home",
       category: "village",
       image: "Logo-HowellHome-1024.jpg",
-      description: "Residential building and remodeling company.",
+      description: "Residential building and remodeling company",
       client: "Howell Home",
       year: null,
       tags: ["logo", "monogram", "construction"]
@@ -158,7 +158,7 @@ const CONFIG = {
       title: "The Ruff",
       category: "village",
       image: "Logo-TheRuff-1024.jpg",
-      description: "A community featuring undiscovered indie rock artists",
+      description: "An online community featuring undiscovered indie rock artists",
       client: "The Ruff",
       year: null,
       tags: ["logo", "animated", "music", "bold"]
@@ -168,7 +168,7 @@ const CONFIG = {
       title: "The Stone Soup Project",
       category: "village",
       image: "Logo-StoneSoup-1024.jpg",
-      description: "Hand-drawn community organization branding",
+      description: "Hand-drawn community outreach food drive branding",
       client: "The Stone Soup Project",
       year: null,
       tags: ["logo", "hand-drawn", "community", "nonprofit"]
@@ -178,7 +178,7 @@ const CONFIG = {
       title: "Arrow Line Company",
       category: "village",
       image: "Logo-ArrowLine-1024.jpg",
-      description: "Clean typography with strong directional design",
+      description: "A logo for a logistics line company",
       client: "Arrow Line Company",
       year: null,
       tags: ["logo", "typography", "modern"]
@@ -188,7 +188,7 @@ const CONFIG = {
       title: "Brothers Beard Balm",
       category: "village",
       image: "Logo-Brothers-1024.jpg",
-      description: "Vintage globe design for handcrafted grooming products",
+      description: "Vintage globe design for a handcrafted beard balm",
       client: "Brothers Beard Balm",
       year: null,
       tags: ["logo", "vintage", "grooming", "handcrafted"]
